@@ -1,360 +1,168 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>3 Letras Que Me Fizeram Sair do CLT: PDF</title>
-  <meta name="description" content="Aprenda como criar e vender produtos digitais usando IA — mesmo começando do zero e ainda trabalhando CLT." />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>3 Letras Que Me Fizeram Sair do CLT: PDF</title>
 
-  <!-- Open Graph (preview no WhatsApp/Instagram) -->
-  <meta property="og:title" content="3 Letras Que Me Fizeram Sair do CLT: PDF" />
-  <meta property="og:description" content="Como criar e vender produtos digitais usando IA — mesmo começando do zero." />
-  <meta property="og:type" content="website" />
-  <!-- Troque pela sua imagem (URL) quando tiver -->
-  <meta property="og:image" content="" />
-
-  <style>
-    :root{
-      --bg:#070A12;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.08);
-      --text:#E9ECF3;
-      --muted:#B8C0D6;
-      --line:rgba(255,255,255,.12);
-      --accent:#7C5CFF;
-      --accent2:#22D3EE;
-      --shadow: 0 12px 40px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1020px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.35), transparent 55%),
-        radial-gradient(1000px 700px at 90% 0%, rgba(34,211,238,.22), transparent 60%),
-        radial-gradient(900px 650px at 50% 120%, rgba(124,92,255,.18), transparent 55%),
-        var(--bg);
-      line-height:1.45;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px;}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; padding:10px 0 6px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:700; letter-spacing:.2px;
-    }
-    .badge{
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px; border-radius:999px;
-      background:rgba(255,255,255,.04);
-    }
-    .hero{
-      margin-top:18px;
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:28px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero::after{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        radial-gradient(600px 260px at 15% 15%, rgba(124,92,255,.22), transparent 55%),
-        radial-gradient(520px 260px at 85% 5%, rgba(34,211,238,.16), transparent 60%);
-      pointer-events:none;
-      filter:saturate(1.2);
-    }
-    .hero > *{position:relative; z-index:1}
-    h1{
-      margin:0 0 10px;
-      font-size:clamp(30px, 4.2vw, 52px);
-      line-height:1.05;
-      letter-spacing:-.5px;
-    }
-    .sub{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:clamp(15px, 1.55vw, 18px);
-      max-width:60ch;
-    }
-    .ctaRow{
-      display:flex; flex-wrap:wrap;
-      gap:12px; align-items:center;
-      margin:18px 0 6px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:14px 18px;
-      border-radius:14px;
-      border:1px solid transparent;
-      text-decoration:none;
-      font-weight:800;
-      letter-spacing:.2px;
-      transition:transform .08s ease, filter .2s ease, background .2s ease;
-      user-select:none;
-      cursor:pointer;
-      min-width:220px;
-    }
-    .btn:active{transform:translateY(1px)}
-    .btnPrimary{
-      background:linear-gradient(135deg, var(--accent), #9B7CFF);
-      color:#0b0f1b;
-      box-shadow: 0 10px 26px rgba(124,92,255,.28);
-    }
-    .btnSecondary{
-      background:rgba(255,255,255,.06);
-      border-color:var(--line);
-      color:var(--text);
-    }
-    .smallnote{color:var(--muted); font-size:13px; margin:8px 0 0}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      margin-top:18px;
-    }
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr}
-      .btn{min-width:100%}
-    }
-    .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      border-radius:var(--radius);
-      padding:20px;
-    }
-    h2{
-      margin:0 0 10px;
-      font-size:20px;
-      letter-spacing:-.2px;
-    }
-    .list{
-      margin:10px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-    .li{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px 12px;
-      border-radius:14px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-    }
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background:linear-gradient(135deg, var(--accent2), var(--accent));
-      margin-top:5px; flex:0 0 auto;
-    }
-    .muted{color:var(--muted)}
-    .method{
-      display:grid;
-      gap:10px;
-      margin-top:12px;
-    }
-    .pill{
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-    }
-    .pill b{color:#fff}
-    .price{
-      display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
-      margin:10px 0 8px;
-    }
-    .old{
-      color:var(--muted); text-decoration:line-through;
-      font-weight:700;
-    }
-    .new{
-      font-size:28px; font-weight:900;
-      background: linear-gradient(135deg, #fff, rgba(255,255,255,.65));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
-    .guarantee{
-      display:flex; gap:12px; align-items:flex-start;
-      margin-top:14px;
-      padding:14px;
-      border-radius:14px;
-      background:rgba(34,211,238,.08);
-      border:1px solid rgba(34,211,238,.20);
-    }
-    .shield{
-      width:38px; height:38px; border-radius:12px;
-      display:grid; place-items:center;
-      background:rgba(34,211,238,.14);
-      border:1px solid rgba(34,211,238,.25);
-      flex:0 0 auto;
-    }
-    footer{
-      margin-top:22px;
-      color:var(--muted);
-      font-size:12px;
-      text-align:center;
-      opacity:.9;
-    }
-    .faq{
-      margin-top:18px;
-      display:grid; gap:10px;
-    }
-    details{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      border-radius:14px;
-      padding:12px 14px;
-    }
-    summary{
-      cursor:pointer;
-      font-weight:800;
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{margin:10px 0 0; color:var(--muted)}
-  </style>
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f9;
+  color:#1c1c1c;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+.hero{
+  background:white;
+  padding:50px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+h1{
+  font-size:38px;
+  margin-bottom:20px;
+}
+.highlight{
+  color:#1f6feb;
+}
+.sub{
+  font-size:18px;
+  color:#555;
+  margin-bottom:30px;
+}
+.button{
+  display:inline-block;
+  padding:15px 30px;
+  background:#1f6feb;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+  transition:0.3s;
+}
+.button:hover{
+  background:#1558c0;
+}
+.section{
+  margin-top:50px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom:20px;
+}
+.price{
+  font-size:28px;
+  font-weight:bold;
+  color:#1f6feb;
+}
+.old{
+  text-decoration:line-through;
+  color:#999;
+}
+.testimonial{
+  border-left:4px solid #1f6feb;
+  padding-left:15px;
+  margin-top:15px;
+  font-style:italic;
+  color:#444;
+}
+.badge{
+  background:#eaf1ff;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  display:inline-block;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--accent));"></span>
-        <span>3 Letras • PDF</span>
-      </div>
-      <div class="badge">Acesso imediato • Kiwify</div>
-    </div>
 
-    <section class="hero" id="topo">
-      <h1>3 letras simples mudaram minha vida financeira.<br/>E podem mudar a sua também: <span style="background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;">PDF</span>.</h1>
-      <p class="sub">
-        Aprenda como criar e vender produtos digitais usando IA — mesmo começando do zero e ainda trabalhando CLT.
-      </p>
+<div class="container">
 
-      <div class="ctaRow">
-        <!-- TROQUE o link abaixo pelo seu link do checkout da Kiwify -->
-        <a class="btn btnPrimary" href="https://SEU-LINK-DA-KIWIFY-AQUI" target="_blank" rel="noopener">
-          QUERO COMEÇAR AGORA
-          <span aria-hidden="true">→</span>
-        </a>
-        <a class="btn btnSecondary" href="#conteudo">Ver o que eu vou receber</a>
-      </div>
+<div class="hero">
+<h1>3 letras simples mudaram minha vida financeira.<br>
+E podem mudar a sua também: <span class="highlight">PDF</span></h1>
 
-      <p class="smallnote">⚠️ Dica: use o mesmo link no seu TikTok/Instagram bio para medir cliques.</p>
-    </section>
+<p class="sub">
+Aprenda como criar e vender produtos digitais usando IA — mesmo começando do zero e ainda trabalhando CLT.
+</p>
 
-    <section class="grid" id="conteudo">
-      <div class="card">
-        <h2>Se você se sente assim…</h2>
-        <ul class="list">
-          <li class="li"><span class="dot"></span><span>Trabalha muito e o dinheiro nunca sobra.</span></li>
-          <li class="li"><span class="dot"></span><span>Vive esperando o dia do pagamento.</span></li>
-          <li class="li"><span class="dot"></span><span>Quer renda extra, mas não sabe por onde começar.</span></li>
-          <li class="li"><span class="dot"></span><span>Tem medo de tentar algo online e não funcionar.</span></li>
-        </ul>
+<a href="COLE_SEU_LINK_KIWIFY_AQUI" class="button" target="_blank">
+QUERO COMEÇAR AGORA
+</a>
 
-        <div style="height:12px"></div>
+<div class="badge">Atualizado em Fevereiro 2026</div>
+</div>
 
-        <h2>A virada é simples</h2>
-        <p class="muted" style="margin:0">
-          Você não precisa de curso gigante, não precisa “virar influencer”, nem investir alto.
-          Você precisa de um <b>ativo digital simples</b>: um PDF bem estruturado e vendável.
-        </p>
+<div class="section">
+<h2>O que você vai aprender</h2>
 
-        <div class="method">
-          <div class="pill"><b>P</b> — <b>Problema Lucrativo</b>: encontre dores que as pessoas já pagam para resolver.</div>
-          <div class="pill"><b>D</b> — <b>Desenvolvimento com IA</b>: monte conteúdo rápido, organizado e com clareza.</div>
-          <div class="pill"><b>F</b> — <b>Funil Automático</b>: venda com um sistema simples (página + checkout + entrega).</div>
-        </div>
-      </div>
+<div class="card">
+✔ Como escolher um problema lucrativo  
+</div>
 
-      <aside class="card">
-        <h2>O que você recebe</h2>
-        <ul class="list">
-          <li class="li"><span class="dot"></span><span>Método completo passo a passo (do zero).</span></li>
-          <li class="li"><span class="dot"></span><span>Estrutura pronta para criar seu primeiro PDF.</span></li>
-          <li class="li"><span class="dot"></span><span>Estratégia de validação rápida (sem complicar).</span></li>
-          <li class="li"><span class="dot"></span><span>Checklist prático para executar em 7 dias.</span></li>
-          <li class="li"><span class="dot"></span><span>Bônus: lista de nichos lucrativos.</span></li>
-        </ul>
+<div class="card">
+✔ Como criar seu PDF usando IA  
+</div>
 
-        <div style="height:14px"></div>
+<div class="card">
+✔ Como vender todos os dias com um funil simples  
+</div>
+</div>
 
-        <h2>Oferta de lançamento</h2>
-        <div class="price">
-          <span class="old">de R$ 97</span>
-          <span class="new">por R$ 47</span>
-        </div>
-        <p class="muted" style="margin:0 0 12px">
-          Pagamento único • acesso imediato na área de membros.
-        </p>
+<div class="section">
+<h2>Prova Social</h2>
 
-        <a class="btn btnPrimary" href="https://SEU-LINK-DA-KIWIFY-AQUI" target="_blank" rel="noopener">
-          QUERO MINHA CÓPIA AGORA
-          <span aria-hidden="true">→</span>
-        </a>
+<div class="card">
+<div class="testimonial">
+“Eu nunca tinha vendido nada online. Em 15 dias fiz minhas primeiras vendas.”
+<br><strong>— Carlos M., 12/01/2026</strong>
+</div>
+</div>
 
-        <div class="guarantee">
-          <div class="shield" aria-hidden="true">🛡️</div>
-          <div>
-            <b>Garantia de 7 dias</b>
-            <div class="muted" style="margin-top:4px">
-              Teste sem risco. Se não gostar, reembolso total.
-            </div>
-          </div>
-        </div>
-      </aside>
-    </section>
+<div class="card">
+<div class="testimonial">
+“Simples e direto. Consegui montar meu produto mesmo trabalhando CLT.”
+<br><strong>— Juliana R., 28/01/2026</strong>
+</div>
+</div>
 
-    <section class="card" style="margin-top:18px">
-      <h2>Perguntas rápidas</h2>
-      <div class="faq">
-        <details>
-          <summary>Eu preciso aparecer?</summary>
-          <p>Não. Você pode vender com conteúdo simples e direcionando para a página + checkout. Aparecer ajuda, mas não é obrigatório.</p>
-        </details>
-        <details>
-          <summary>Preciso ser expert?</summary>
-          <p>Você precisa escolher um problema real e organizar uma solução clara. A IA ajuda a estruturar e acelerar o processo.</p>
-        </details>
-        <details>
-          <summary>Como eu recebo o material?</summary>
-          <p>Após o pagamento, o acesso fica disponível automaticamente na área de membros da Kiwify.</p>
-        </details>
-      </div>
+<div class="card">
+<div class="testimonial">
+“Eu achava que precisava aparecer. Descobri que não.”
+<br><strong>— Rafael S., 02/02/2026</strong>
+</div>
+</div>
 
-      <div class="ctaRow" style="margin-top:16px">
-        <a class="btn btnPrimary" href="https://SEU-LINK-DA-KIWIFY-AQUI" target="_blank" rel="noopener">
-          ENTRAR AGORA
-          <span aria-hidden="true">→</span>
-        </a>
-        <a class="btn btnSecondary" href="#topo">Voltar ao topo</a>
-      </div>
-    </section>
+</div>
 
-    <footer>
-      © <span id="year"></span> • 3 Letras Que Me Fizeram Sair do CLT: PDF • Todos os direitos reservados.
-    </footer>
-  </div>
+<div class="section">
+<h2>Oferta Especial</h2>
 
-  <script>
-    // Ano automático
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<div class="card" style="text-align:center">
+<p class="old">De R$ 97</p>
+<p class="price">Por apenas R$ 47</p>
+<p>Acesso imediato • Garantia de 7 dias</p>
+
+<a href="COLE_SEU_LINK_KIWIFY_AQUI" class="button" target="_blank">
+QUERO MINHA CÓPIA AGORA
+</a>
+</div>
+</div>
+
+</div>
+
 </body>
 </html>
+
