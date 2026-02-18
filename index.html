@@ -1,168 +1,616 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>3 Letras Que Me Fizeram Sair do CLT: PDF</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3 Letras Que Me Fizeram Sair do CLT: PDF</title>
+  <meta name="description" content="3 letras (PDF) que mudam o jogo: crie e venda um produto digital simples usando IA — mesmo começando do zero e ainda trabalhando CLT." />
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f4f6f9;
-  color:#1c1c1c;
-}
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
-.hero{
-  background:white;
-  padding:50px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  text-align:center;
-}
-h1{
-  font-size:38px;
-  margin-bottom:20px;
-}
-.highlight{
-  color:#1f6feb;
-}
-.sub{
-  font-size:18px;
-  color:#555;
-  margin-bottom:30px;
-}
-.button{
-  display:inline-block;
-  padding:15px 30px;
-  background:#1f6feb;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  transition:0.3s;
-}
-.button:hover{
-  background:#1558c0;
-}
-.section{
-  margin-top:50px;
-}
-.card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-  margin-bottom:20px;
-}
-.price{
-  font-size:28px;
-  font-weight:bold;
-  color:#1f6feb;
-}
-.old{
-  text-decoration:line-through;
-  color:#999;
-}
-.testimonial{
-  border-left:4px solid #1f6feb;
-  padding-left:15px;
-  margin-top:15px;
-  font-style:italic;
-  color:#444;
-}
-.badge{
-  background:#eaf1ff;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:12px;
-  display:inline-block;
-  margin-top:10px;
-}
-</style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="3 Letras Que Me Fizeram Sair do CLT: PDF" />
+  <meta property="og:description" content="Crie e venda um produto digital simples usando IA — mesmo começando do zero." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --muted2:#64748b;
+      --line:rgba(15,23,42,.10);
+
+      --primary:#2563eb;
+      --primary2:#1d4ed8;
+      --accent:#06b6d4;
+      --good:#16a34a;
+      --warn:#f59e0b;
+
+      --shadow: 0 18px 50px rgba(2,6,23,.10);
+      --shadow2: 0 12px 28px rgba(2,6,23,.08);
+
+      --radius: 18px;
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(980px 540px at 10% 0%, rgba(37,99,235,.16), transparent 60%),
+        radial-gradient(980px 540px at 90% 5%, rgba(6,182,212,.16), transparent 60%),
+        radial-gradient(980px 540px at 50% 120%, rgba(37,99,235,.10), transparent 55%),
+        var(--bg);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px 72px;}
+
+    /* Sticky header */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: rgba(247,249,252,.82);
+      border-bottom:1px solid var(--line);
+    }
+    .topbarInner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:-.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: 0 8px 24px rgba(37,99,235,.22);
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.7);
+      white-space:nowrap;
+    }
+    .badge b{color:var(--text)}
+    .ctaMini{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:900;
+      border:1px solid rgba(37,99,235,.20);
+      background: rgba(37,99,235,.08);
+      color: var(--primary2);
+      text-decoration:none;
+      transition: transform .08s ease, filter .2s ease;
+    }
+    .ctaMini:active{transform:translateY(1px)}
+    .ctaMini:hover{filter:brightness(.98)}
+
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.72));
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(680px 320px at 20% 20%, rgba(37,99,235,.18), transparent 55%),
+        radial-gradient(660px 320px at 85% 10%, rgba(6,182,212,.14), transparent 60%);
+      pointer-events:none;
+    }
+    .hero > *{position:relative; z-index:1}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid rgba(6,182,212,.28);
+      background: rgba(6,182,212,.10);
+      color:#0e7490;
+      font-size:12px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:800;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 4.3vw, 54px);
+      line-height:1.03;
+      letter-spacing:-.9px;
+    }
+    .grad{
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size: clamp(15px, 1.6vw, 18px);
+      max-width: 70ch;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+    @media (max-width: 940px){
+      .heroGrid{grid-template-columns:1fr}
+    }
+
+    .btnRow{
+      display:flex; flex-wrap:wrap; gap:12px;
+      margin: 18px 0 8px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 950;
+      letter-spacing:.2px;
+      text-decoration:none;
+      transition: transform .08s ease, filter .2s ease;
+      user-select:none;
+      cursor:pointer;
+      min-width: 240px;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--primary), #4f8cff);
+      color:#fff;
+      box-shadow: 0 14px 28px rgba(37,99,235,.22);
+    }
+    .btnPrimary:hover{filter:brightness(.98)}
+    .btnGhost{
+      background: rgba(255,255,255,.75);
+      border-color: var(--line);
+      color: var(--text);
+    }
+    .btnGhost:hover{filter:brightness(.99)}
+
+    .micro{
+      font-size: 12.5px;
+      color: var(--muted2);
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .micro b{color:var(--text)}
+    .check{
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .check span{
+      width:18px; height:18px; border-radius:6px;
+      display:grid; place-items:center;
+      background: rgba(22,163,74,.12);
+      border:1px solid rgba(22,163,74,.22);
+      color: var(--good);
+      font-weight:900;
+      font-size:12px;
+    }
+
+    /* Cards */
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      padding: 20px;
+    }
+    .card h3{
+      margin:0 0 10px;
+      letter-spacing:-.3px;
+    }
+    .muted{color:var(--muted)}
+    .list{
+      list-style:none; padding:0; margin: 10px 0 0;
+      display:grid; gap:10px;
+    }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(15,23,42,.03);
+      border:1px solid rgba(15,23,42,.08);
+    }
+    .li i{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      margin-top: 6px;
+      flex: 0 0 auto;
+    }
+
+    /* Sections */
+    .section{
+      margin-top: 18px;
+    }
+    .sectionTitle{
+      margin: 26px 0 12px;
+      font-size: 22px;
+      letter-spacing:-.35px;
+    }
+    .grid2{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid3{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px){
+      .grid2,.grid3{grid-template-columns:1fr}
+      .btn{min-width:100%}
+    }
+
+    /* Story / proof */
+    .story{
+      border-left: 4px solid rgba(37,99,235,.45);
+      padding-left: 14px;
+      color: var(--muted);
+    }
+    .quote{
+      border-left: 4px solid rgba(6,182,212,.45);
+      padding-left: 14px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .stamp{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px dashed rgba(37,99,235,.28);
+      background: rgba(37,99,235,.06);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .stamp b{color:var(--text)}
+    .priceBox{
+      text-align:left;
+    }
+    .priceRow{
+      display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+      margin: 8px 0 10px;
+    }
+    .old{
+      text-decoration: line-through;
+      color: var(--muted2);
+      font-weight: 800;
+    }
+    .new{
+      font-size: 34px;
+      font-weight: 1000;
+      letter-spacing:-.6px;
+      color: var(--primary2);
+    }
+    .reassure{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(22,163,74,.08);
+      border:1px solid rgba(22,163,74,.18);
+      margin-top: 12px;
+    }
+    .shield{
+      width:38px; height:38px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: rgba(22,163,74,.12);
+      border:1px solid rgba(22,163,74,.20);
+      font-weight: 900;
+    }
+
+    /* FAQ */
+    details{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow2);
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 900;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color: var(--muted)}
+
+    footer{
+      margin-top: 26px;
+      text-align:center;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+    .tiny{font-size:12px; color:var(--muted2)}
+  </style>
 </head>
 
 <body>
+  <!-- Sticky Header -->
+  <div class="topbar">
+    <div class="topbarInner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>3 Letras • <span class="grad">PDF</span></span>
+        <span class="badge">Acesso imediato • <b>Kiwify</b></span>
+      </div>
+      <a class="ctaMini" href="LINK_KIWIFY_AQUI" target="_blank" rel="noopener">Quero entrar agora →</a>
+    </div>
+  </div>
 
-<div class="container">
+  <div class="wrap">
 
-<div class="hero">
-<h1>3 letras simples mudaram minha vida financeira.<br>
-E podem mudar a sua também: <span class="highlight">PDF</span></h1>
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <span class="kicker">⚡ Método simples + IA + execução rápida</span>
 
-<p class="sub">
-Aprenda como criar e vender produtos digitais usando IA — mesmo começando do zero e ainda trabalhando CLT.
-</p>
+      <h1>3 letras simples mudaram meu jogo financeiro.<br/>E podem mudar o seu também: <span class="grad">PDF</span>.</h1>
 
-<a href="COLE_SEU_LINK_KIWIFY_AQUI" class="button" target="_blank">
-QUERO COMEÇAR AGORA
-</a>
+      <p class="sub">
+        Você não precisa de curso gigante, nem de aparecer todo dia.
+        Você precisa de um <b>ativo digital simples</b> (um PDF) que vende —
+        e de um método claro pra tirar do zero mesmo trabalhando CLT.
+      </p>
 
-<div class="badge">Atualizado em Fevereiro 2026</div>
-</div>
+      <div class="btnRow">
+        <a class="btn btnPrimary" href="LINK_KIWIFY_AQUI" target="_blank" rel="noopener">QUERO COMEÇAR AGORA →</a>
+        <a class="btn btnGhost" href="#conteudo">Ver o que eu vou receber</a>
+      </div>
 
-<div class="section">
-<h2>O que você vai aprender</h2>
+      <div class="micro">
+        <div class="check"><span>✓</span> <b>Entrega imediata</b> pela Kiwify</div>
+        <div class="check"><span>✓</span> <b>7 dias</b> de garantia</div>
+        <div class="check"><span>✓</span> <b>Do zero</b> (sem “complicar”)</div>
+      </div>
 
-<div class="card">
-✔ Como escolher um problema lucrativo  
-</div>
+      <div class="heroGrid">
+        <div class="card">
+          <h3>Se você está no CLT e sente isso…</h3>
+          <ul class="list">
+            <li class="li"><i></i><span>Trabalha muito e o dinheiro nunca sobra.</span></li>
+            <li class="li"><i></i><span>Vive esperando o dia do pagamento.</span></li>
+            <li class="li"><i></i><span>Quer renda extra, mas não sabe por onde começar.</span></li>
+            <li class="li"><i></i><span>Começa coisas e para porque fica “complexo demais”.</span></li>
+          </ul>
+        </div>
 
-<div class="card">
-✔ Como criar seu PDF usando IA  
-</div>
+        <div class="card priceBox">
+          <h3>Oferta de lançamento</h3>
+          <div class="priceRow">
+            <span class="old">de R$ 97</span>
+            <span class="new">R$ 47</span>
+          </div>
+          <p class="muted" style="margin:0 0 10px">
+            Pagamento único • acesso imediato.
+          </p>
 
-<div class="card">
-✔ Como vender todos os dias com um funil simples  
-</div>
-</div>
+          <div class="stamp">🗓️ Atualizado em <b>Fevereiro/2026</b> • conteúdo direto ao ponto</div>
 
-<div class="section">
-<h2>Prova Social</h2>
+          <div class="reassure">
+            <div class="shield">🛡️</div>
+            <div>
+              <b>Garantia 7 dias</b>
+              <div class="tiny">Se não fizer sentido pra você, é só pedir reembolso.</div>
+            </div>
+          </div>
 
-<div class="card">
-<div class="testimonial">
-“Eu nunca tinha vendido nada online. Em 15 dias fiz minhas primeiras vendas.”
-<br><strong>— Carlos M., 12/01/2026</strong>
-</div>
-</div>
+          <div style="height:12px"></div>
+          <a class="btn btnPrimary" href="LINK_KIWIFY_AQUI" target="_blank" rel="noopener">EU QUERO MEU ACESSO →</a>
+          <div class="tiny" style="margin-top:10px">⚠️ Sem estoque, sem envio, sem complicação. Você cria uma vez e vende várias.</div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<div class="testimonial">
-“Simples e direto. Consegui montar meu produto mesmo trabalhando CLT.”
-<br><strong>— Juliana R., 28/01/2026</strong>
-</div>
-</div>
+    <!-- GATILHOS / COPYS (variação) -->
+    <section class="section" id="conteudo">
+      <h2 class="sectionTitle">O que torna isso diferente (e mais simples do que parece)</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Gatilho: simplicidade</h3>
+          <p class="muted" style="margin:0">
+            Enquanto todo mundo tenta vender “curso gigante”, você vai criar um <b>PDF vendável</b>.
+            É o melhor produto de entrada: rápido de produzir e fácil de escalar.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Gatilho: velocidade</h3>
+          <p class="muted" style="margin:0">
+            Você vai usar IA pra acelerar o processo. Não é “aprender IA”.
+            É usar IA pra <b>ganhar tempo</b> e colocar o produto na rua.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Gatilho: controle</h3>
+          <p class="muted" style="margin:0">
+            Você para de depender 100% de salário e começa a construir um <b>ativo</b>.
+            Produto digital é isso: cria uma vez, vende várias.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<div class="testimonial">
-“Eu achava que precisava aparecer. Descobri que não.”
-<br><strong>— Rafael S., 02/02/2026</strong>
-</div>
-</div>
+    <!-- HISTÓRIA (seu relato) -->
+    <section class="section">
+      <h2 class="sectionTitle">Meu relato (o que aconteceu antes do “PDF”)</h2>
+      <div class="card">
+        <p class="story" style="margin:0">
+          Eu cheguei num ponto em que eu olhei pro CLT e pensei: “não dá”.
+          Não era preguiça — era a sensação de que eu tava sempre correndo e nunca saindo do lugar.
+          Foi aí que eu entendi uma coisa: <b>eu precisava de um ativo</b>, não de mais horas de trabalho.
+          <br/><br/>
+          Quando eu descobri que um <b>PDF bem feito</b> podia virar produto e vender com um funil simples,
+          a chave virou. O objetivo desse material é te dar o caminho curto: <b>clareza + estrutura + execução</b>.
+        </p>
+        <div style="height:12px"></div>
+        <p class="quote" style="margin:0">
+          “Se eu tivesse isso antes, eu teria economizado meses de tentativa e erro.”
+        </p>
+      </div>
+    </section>
 
-</div>
+    <!-- MÉTODO -->
+    <section class="section">
+      <h2 class="sectionTitle">O Método P.D.F. (o mapa sem enrolação)</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3><span class="grad">P</span> — Problema Lucrativo</h3>
+          <p class="muted" style="margin:0">
+            Você aprende a escolher uma dor que as pessoas já pagam para resolver.
+            Sem chute, sem produto “sem mercado”.
+          </p>
+        </div>
+        <div class="card">
+          <h3><span class="grad">D</span> — Desenvolvimento com IA</h3>
+          <p class="muted" style="margin:0">
+            Você usa IA pra estruturar: capítulos, passo a passo, checklists e bônus.
+            Resultado: material profissional em menos tempo.
+          </p>
+        </div>
+        <div class="card">
+          <h3><span class="grad">F</span> — Funil Automático</h3>
+          <p class="muted" style="margin:0">
+            Página simples + checkout + entrega automática.
+            Você monta a estrutura pra vender sem depender de “força bruta”.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="section">
-<h2>Oferta Especial</h2>
+    <!-- O QUE RECEBE -->
+    <section class="section">
+      <h2 class="sectionTitle">O que você recebe ao entrar</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Dentro do ebook</h3>
+          <ul class="list">
+            <li class="li"><i></i><span>Passo a passo pra criar um PDF vendável (do zero).</span></li>
+            <li class="li"><i></i><span>Como definir promessa e estrutura (sem travar).</span></li>
+            <li class="li"><i></i><span>Como usar IA pra acelerar (prompts e fluxos).</span></li>
+            <li class="li"><i></i><span>Como montar funil simples com Kiwify (sem complicar).</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bônus</h3>
+          <ul class="list">
+            <li class="li"><i></i><span>Checklist “Primeiro PDF em 7 dias”.</span></li>
+            <li class="li"><i></i><span>Lista de ideias de nichos lucrativos (pra você escolher rápido).</span></li>
+            <li class="li"><i></i><span>Modelo de roteiro pra vídeo curto (TikTok/Reels).</span></li>
+            <li class="li"><i></i><span>Plano de 7 dias de postagem (pra validar).</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<div class="card" style="text-align:center">
-<p class="old">De R$ 97</p>
-<p class="price">Por apenas R$ 47</p>
-<p>Acesso imediato • Garantia de 7 dias</p>
+    <!-- PROVA SOCIAL (do jeito certo: placeholders) -->
+    <section class="section">
+      <h2 class="sectionTitle">Prova social (substitua por prints reais quando tiver)</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Mensagem recebida</h3>
+          <p class="muted" style="margin:0">
+            “Cara, isso me deu clareza. Eu tava travado e agora tenho um caminho.”
+          </p>
+          <p class="tiny" style="margin:10px 0 0"><b>— (coloque aqui um print real)</b> • 02/2026</p>
+        </div>
+        <div class="card">
+          <h3>Mensagem recebida</h3>
+          <p class="muted" style="margin:0">
+            “Finalmente algo direto. Sem enrolação e sem promessa milagrosa.”
+          </p>
+          <p class="tiny" style="margin:10px 0 0"><b>— (coloque aqui um print real)</b> • 02/2026</p>
+        </div>
+        <div class="card">
+          <h3>Mensagem recebida</h3>
+          <p class="muted" style="margin:0">
+            “Eu trabalho o dia todo. Esse método encaixou na minha rotina.”
+          </p>
+          <p class="tiny" style="margin:10px 0 0"><b>— (coloque aqui um print real)</b> • 02/2026</p>
+        </div>
+      </div>
+      <p class="tiny" style="margin-top:10px">
+        ✅ Dica: quando você fizer as primeiras vendas, peça autorização e coloque prints reais (isso dobra a conversão).
+      </p>
+    </section>
 
-<a href="COLE_SEU_LINK_KIWIFY_AQUI" class="button" target="_blank">
-QUERO MINHA CÓPIA AGORA
-</a>
-</div>
-</div>
+    <!-- OFERTA FINAL -->
+    <section class="section" id="oferta">
+      <div class="card" style="padding:24px">
+        <h2 style="margin:0 0 6px; letter-spacing:-.4px;">Entrar agora (sem enrolação)</h2>
+        <p class="muted" style="margin:0">
+          Se você quer começar com algo simples, validável e escalável, esse é o caminho.
+        </p>
 
-</div>
+        <div class="priceRow" style="margin-top:12px">
+          <span class="old">de R$ 97</span>
+          <span class="new">R$ 47</span>
+          <span class="badge">Pagamento único</span>
+        </div>
 
+        <div class="btnRow" style="margin-top:10px">
+          <a class="btn btnPrimary" href="LINK_KIWIFY_AQUI" target="_blank" rel="noopener">SIM, EU QUERO COMEÇAR →</a>
+          <a class="btn btnGhost" href="#faq">Tenho dúvidas (FAQ)</a>
+        </div>
+
+        <div class="reassure">
+          <div class="shield">🛡️</div>
+          <div>
+            <b>Garantia 7 dias</b>
+            <div class="tiny">Compra sem risco. Se não servir pra você, reembolso total.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2 class="sectionTitle">Perguntas rápidas</h2>
+      <div class="grid2">
+        <details open>
+          <summary>Eu preciso aparecer?</summary>
+          <p>Não é obrigatório. Você pode validar com conteúdo simples e CTA para a página + checkout. Aparecer pode ajudar, mas não é regra.</p>
+        </details>
+        <details>
+          <summary>Preciso ser expert?</summary>
+          <p>Você precisa escolher um problema real e montar uma solução clara. A IA acelera a estrutura e a produção.</p>
+        </details>
+        <details>
+          <summary>Em quanto tempo eu consigo colocar no ar?</summary>
+          <p>Se você seguir o método, dá pra tirar do zero e publicar em poucos dias. O foco aqui é execução, não perfeccionismo.</p>
+        </details>
+        <details>
+          <summary>Como recebo o acesso?</summary>
+          <p>Após o pagamento, o conteúdo fica disponível automaticamente na área de membros da Kiwify.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> • 3 Letras Que Me Fizeram Sair do CLT: PDF • Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
